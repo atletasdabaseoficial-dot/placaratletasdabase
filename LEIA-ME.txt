@@ -1,0 +1,104 @@
+===========================================================================
+ PLACAR PRO VNL 3.0  —  Placar de vôlei estilo VNL para OBS
+ Controle por celular + Overlay em tempo real + Substituições + Escalações
+===========================================================================
+
+Inspirado no formato "Central de Transmissão" (gera link de operador +
+link de placar para o OBS) e no visual OFICIAL das transmissões da VNL:
+barra inferior roxa, siglas dos times nas pontas, colunas "SETS", pontos
+grandes no centro ao lado do selo do torneio e bolinha de saque.
+
+---------------------------------------------------------------------------
+ ESTRUTURA
+---------------------------------------------------------------------------
+  server.js                 Servidor de sincronização (Node puro, sem libs)
+  package.json
+  public/
+    index.html              Central de Transmissão (gera os links da partida)
+    controle.html           Painel do operador (celular ou PC)
+    overlay.html            Placar para o OBS (fundo transparente, estilo VNL)
+    assets/
+      app-core.js           Regras de vôlei + modelo de estado
+      sync.js               Sincronização (servidor SSE ou local)
+      overlay.js            Renderização do overlay
+      overlay.css           Estilo VNL do overlay
+      control.js            Lógica do painel
+      control.css           Estilo do painel
+
+---------------------------------------------------------------------------
+ COMO USAR (MODO ONLINE — recomendado, igual ao exemplo)
+---------------------------------------------------------------------------
+ Requisito: ter o Node.js instalado (https://nodejs.org — versão LTS).
+
+ 1. Abra o terminal na pasta do projeto e rode:
+        node server.js
+    Vai aparecer algo como:  http://localhost:3000/
+
+ 2. No navegador do PC, abra:  http://localhost:3000/
+    - Digite um ID para a partida (ex.: brasil-x-italia) e clique em
+      "GERAR LINKS DA PARTIDA".
+    - Ele gera 2 links: CONTROLE (operador) e PLACAR (OBS).
+
+ 3. No OBS: Fontes -> + -> Navegador -> cole o link do PLACAR.
+    Largura 1920, Altura 1080. Fundo já é transparente.
+
+ 4. Abra o link de CONTROLE no celular ou em outro PC.
+    IMPORTANTE: para acessar do celular, troque "localhost" pelo IP local
+    do PC (ex.: http://192.168.0.15:3000/controle.html?id=brasil-x-italia).
+    Descubra o IP com "ipconfig" (Windows) ou "ifconfig"/"ip a" (Mac/Linux).
+    O celular precisa estar na MESMA rede Wi-Fi do PC.
+
+ Pronto: tudo que você faz no controle aparece no placar em tempo real.
+
+---------------------------------------------------------------------------
+ COMO USAR (MODO LOCAL — sem servidor, só no mesmo PC)
+---------------------------------------------------------------------------
+ Se não quiser instalar o Node: basta abrir os arquivos direto.
+ - Abra public/controle.html no Chrome/Edge e use.
+ - No OBS, aponte a fonte de Navegador para o arquivo local overlay.html.
+ - Funciona pela sincronização do próprio navegador (mesmo PC apenas).
+ - Nesse modo o controle NO CELULAR não sincroniza (precisa do servidor).
+
+---------------------------------------------------------------------------
+ PUBLICAR NA INTERNET (virar um link acessível de qualquer lugar)
+---------------------------------------------------------------------------
+ O projeto já está pronto para deploy em serviços gratuitos que rodam Node.
+ Inclui render.yaml (Render.com) e Procfile (Railway/Heroku).
+   - Render.com: New -> Blueprint -> selecione o repositório (lê render.yaml).
+   - Railway/Fly/Glitch/Replit: start command = node server.js
+ Passos gerais:
+   1. Suba a pasta para um repositório no GitHub.
+   2. No serviço escolhido, crie um "Web Service" apontando pro repositório.
+   3. Comando de start: node server.js  (a porta vem de process.env.PORT).
+   4. O serviço te dá uma URL pública — essa vira sua "Central de Transmissão".
+
+---------------------------------------------------------------------------
+ FUNCIONALIDADES
+---------------------------------------------------------------------------
+  • Overlay estilo VNL: barra inferior roxa, siglas nas pontas, colunas
+    "SETS", pontos grandes no centro ao lado do selo do torneio (gradiente
+    laranja/rosa), bolinha de saque girando e cores por time.
+  • NOME COMPLETO opcional: botão "Nome completo" na aba Ao Vivo mostra o
+    nome inteiro do país/equipe abaixo da sigla quando você precisar.
+  • Timeouts com contagem regressiva (30s) no overlay.
+  • Challenge (desafio de vídeo) com selo no overlay.
+  • Set Point / Match Point automáticos + toasts animados.
+  • Fim de set automático pelas regras (25/15 indoor, 21/15 praia, tie-break
+    no set decisivo, vantagem de 2).
+  • SUBSTITUIÇÃO ao vivo: escolhe quem sai/entra, conta trocas do set e
+    mostra card animado no overlay (entra x sai).
+  • Escalações completas: número, nome, posição, capitão (⭐), líbero (L,
+    cor laranja), em quadra (✓). Lower third animado no overlay.
+  • CORES personalizáveis: primária, secundária, destaque e texto do overlay
+    + cor própria de cada time. Deixe com a identidade visual da sua equipe.
+  • Nome do torneio/campeonato no canto da barra.
+  • Presets: exportar/importar a partida em JSON (salvar e recarregar jogos).
+  • Atalhos no teclado (desktop): A = ponto Time A, L = ponto Time B,
+    Z = desfazer.
+
+---------------------------------------------------------------------------
+ DICA SOBRE AS CORES
+---------------------------------------------------------------------------
+ Abra a aba "Config" no controle e ajuste as 4 cores do overlay + as cores
+ dos times. Se você me passar os códigos hexadecimais oficiais da sua equipe
+ (ex.: #0033A0), eu já deixo como padrão no código.

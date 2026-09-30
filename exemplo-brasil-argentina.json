@@ -1,0 +1,145 @@
+{
+  "meta": { "matchId": "jogo1", "atualizado": 0, "versao": 1 },
+  "config": {
+    "torneio": "VNL 2025",
+    "melhorDe": 5,
+    "modo": "indoor",
+    "corPrimaria": "#0e5c3a",
+    "corSecundaria": "#052b1b",
+    "corDestaque": "#ffdf00",
+    "corDestaque2": "#009c3b",
+    "corTexto": "#ffffff",
+    "logoCompeticao": "",
+    "corFundoSets": "",
+    "corFundoPontos": "",
+    "corFundoLogo": "",
+    "mostrarSaque": true,
+    "arbitros": { "primeiro": "Wanderson Silva", "segundo": "Cristina Ramos", "apontadora": "Juliana Mendes" },
+    "transmissao": { "narrador": "Gaúcho", "reporter": "Letícia Costa", "comentarista": "Fernanda Venturini" },
+    "redes": [
+      { "rede": "Instagram", "arroba": "@volei" },
+      { "rede": "YouTube", "arroba": "Vôlei Brasil" }
+    ],
+    "proximosJogos": [
+      { "dataHora": "QUA 30/09 às 21h", "timeA": "BRASIL", "timeB": "POLÔNIA", "torneio": "VNL - Semifinal" },
+      { "dataHora": "SEX 02/10 às 13h", "timeA": "ITÁLIA", "timeB": "FRANÇA", "torneio": "VNL - Semifinal" }
+    ],
+    "jogoAnterior": { "casa": "BRASIL", "visitante": "EUA", "placarCasa": "3", "placarVisitante": "1", "obs": "25-22, 23-25, 25-19, 25-20" },
+    "jogoAtual": { "torneio": "VNL 2025", "fase": "FASE FINAL", "local": "Maracanazinho - Rio de Janeiro" },
+    "proximoJogo": { "dataHora": "QUA 30/09 às 21h", "timeA": "BRASIL", "timeB": "POLÔNIA", "torneio": "VNL - Semifinal" },
+    "faixa": { "titulo": "AO VIVO", "texto": "BRASIL x ARGENTINA" },
+    "parciaisAtual": [],
+    "classificacao": {
+      "titulo": "CLASSIFICAÇÃO",
+      "modo": "mata-mata",
+      "geral": {
+        "rotulo": "CLASSIFICAÇÃO GERAL",
+        "times": [
+          { "nome": "BRASIL", "j": 5, "v": 5, "d": 0, "pts": 15 },
+          { "nome": "POLÔNIA", "j": 5, "v": 4, "d": 1, "pts": 12 },
+          { "nome": "ITÁLIA", "j": 5, "v": 3, "d": 2, "pts": 9 },
+          { "nome": "FRANÇA", "j": 5, "v": 3, "d": 2, "pts": 8 },
+          { "nome": "ARGENTINA", "j": 5, "v": 2, "d": 3, "pts": 7 },
+          { "nome": "EUA", "j": 5, "v": 1, "d": 4, "pts": 4 }
+        ]
+      },
+      "grupos": [
+        { "nome": "GRUPO A", "times": [
+          { "nome": "BRASIL", "j": 3, "v": 3, "d": 0, "pts": 9 },
+          { "nome": "ITÁLIA", "j": 3, "v": 2, "d": 1, "pts": 6 },
+          { "nome": "ARGENTINA", "j": 3, "v": 1, "d": 2, "pts": 3 },
+          { "nome": "EUA", "j": 3, "v": 0, "d": 3, "pts": 0 }
+        ] },
+        { "nome": "GRUPO B", "times": [
+          { "nome": "POLÔNIA", "j": 3, "v": 3, "d": 0, "pts": 9 },
+          { "nome": "FRANÇA", "j": 3, "v": 2, "d": 1, "pts": 6 },
+          { "nome": "JAPÃO", "j": 3, "v": 1, "d": 2, "pts": 3 },
+          { "nome": "SÉRVIA", "j": 3, "v": 0, "d": 3, "pts": 0 }
+        ] }
+      ],
+      "mataMata": {
+        "usarQuartas": true,
+        "quartas": [
+          { "a": "BRASIL", "b": "SÉRVIA", "placarA": "3", "placarB": "0" },
+          { "a": "ITÁLIA", "b": "JAPÃO", "placarA": "3", "placarB": "1" },
+          { "a": "POLÔNIA", "b": "EUA", "placarA": "3", "placarB": "2" },
+          { "a": "FRANÇA", "b": "ARGENTINA", "placarA": "2", "placarB": "3" }
+        ],
+        "semifinais": [
+          { "a": "BRASIL", "b": "ITÁLIA", "placarA": "", "placarB": "" },
+          { "a": "POLÔNIA", "b": "ARGENTINA", "placarA": "", "placarB": "" }
+        ],
+        "final": { "a": "", "b": "", "placarA": "", "placarB": "" },
+        "terceiro": { "a": "", "b": "", "placarA": "", "placarB": "" }
+      }
+    },
+    "noticias": {
+      "titulo": "INFORMATIVO",
+      "subtitulo": "ATLETAS DA BASE",
+      "logo": "",
+      "itens": [
+        { "tag": "DESTAQUE", "texto": "Categoria sub-17 do projeto conquista o título estadual invicta." },
+        { "tag": "PENEIRA", "texto": "Inscrições abertas para novos atletas de 12 a 15 anos até sexta-feira." },
+        { "tag": "AGENDA", "texto": "Amistoso da base neste sábado, às 10h, no ginásio municipal." }
+      ],
+      "rodape": "APOIE A BASE DO VÔLEI BRASILEIRO"
+    },
+    "widgetTipo": "ACONTECENDO AGORA",
+    "widgetTexto": "BRASIL x ARGENTINA"
+  },
+  "timeA": {
+    "nome": "BRASIL", "sigla": "BRA", "cor": "#ffdf00", "logo": "", "tecnico": "Bernardinho",
+    "bandeira": "", "mostrarBandeira": false, "mostrarNomeCompleto": true,
+    "pontos": 0, "sets": 0, "timeouts": 0, "substituicoes": 0
+  },
+  "timeB": {
+    "nome": "ARGENTINA", "sigla": "ARG", "cor": "#6c9fd6", "logo": "", "tecnico": "Marcelo Mendez",
+    "bandeira": "", "mostrarBandeira": false, "mostrarNomeCompleto": true,
+    "pontos": 0, "sets": 0, "timeouts": 0, "substituicoes": 0
+  },
+  "saque": "A",
+  "setAtual": 3,
+  "historicoSets": [ { "a": 25, "b": 22 }, { "a": 23, "b": 25 } ],
+  "escalacaoA": [
+    { "num": "14", "nome": "CACHOPA", "pos": "Levantador", "zona": "1", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "10", "nome": "DARLAN", "pos": "Oposto", "zona": "4", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "18", "nome": "LUCARELLI", "pos": "Ponteiro", "zona": "2", "emQuadra": true, "libero": false, "capitao": true },
+    { "num": "6", "nome": "ADRIANO", "pos": "Ponteiro", "zona": "5", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "16", "nome": "FLAVIO", "pos": "Central", "zona": "3", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "11", "nome": "JUDSON", "pos": "Central", "zona": "6", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "15", "nome": "MAIQUE", "pos": "Libero", "zona": "", "emQuadra": true, "libero": true, "capitao": false },
+    { "num": "5", "nome": "BRASILIA", "pos": "Levantador", "zona": "", "emQuadra": false, "libero": false, "capitao": false },
+    { "num": "1", "nome": "ALAN", "pos": "Oposto", "zona": "", "emQuadra": false, "libero": false, "capitao": false },
+    { "num": "8", "nome": "ARTHUR BENTO", "pos": "Ponteiro", "zona": "", "emQuadra": false, "libero": false, "capitao": false },
+    { "num": "7", "nome": "MATHEUS PINTA", "pos": "Central", "zona": "", "emQuadra": false, "libero": false, "capitao": false }
+  ],
+  "escalacaoB": [
+    { "num": "15", "nome": "DE CECCO", "pos": "Levantador", "zona": "1", "emQuadra": true, "libero": false, "capitao": true },
+    { "num": "12", "nome": "BRUNO LIMA", "pos": "Oposto", "zona": "4", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "13", "nome": "PALACIOS", "pos": "Ponteiro", "zona": "2", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "16", "nome": "PALONSKY", "pos": "Ponteiro", "zona": "5", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "8", "nome": "LOSER", "pos": "Central", "zona": "3", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "4", "nome": "GALLEGO", "pos": "Central", "zona": "6", "emQuadra": true, "libero": false, "capitao": false },
+    { "num": "9", "nome": "DANANI", "pos": "Libero", "zona": "", "emQuadra": true, "libero": true, "capitao": false },
+    { "num": "1", "nome": "SANCHEZ", "pos": "Levantador", "zona": "", "emQuadra": false, "libero": false, "capitao": false },
+    { "num": "25", "nome": "KUKARTSEV", "pos": "Oposto", "zona": "", "emQuadra": false, "libero": false, "capitao": false },
+    { "num": "7", "nome": "FACUNDO CONTE", "pos": "Ponteiro", "zona": "", "emQuadra": false, "libero": false, "capitao": false },
+    { "num": "18", "nome": "MARTIN RAMOS", "pos": "Central", "zona": "", "emQuadra": false, "libero": false, "capitao": false }
+  ],
+  "overlay": {
+    "mostrarPlacar": true,
+    "mostrarInfo": true,
+    "mostrarNomeCompleto": true,
+    "escalacaoVisivel": null,
+    "quadraVisivel": null,
+    "widgetVisivel": false,
+    "arbitrosVisivel": false,
+    "setPt": null,
+    "matchPt": null,
+    "mvp": { "visivel": false, "nome": "", "num": "", "pos": "", "time": "A", "foto": "", "legenda": "", "titulo": "MELHOR DA PARTIDA" },
+    "tema": "vnl"
+  },
+  "evento": null,
+  "timeout": null,
+  "challenge": null
+}

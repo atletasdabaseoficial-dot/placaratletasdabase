@@ -1,0 +1,13 @@
+{
+  "name": "placar-pro-vnl",
+  "version": "3.0.0",
+  "description": "Placar de volei estilo VNL para OBS, com controle por celular, overlay em tempo real, substituicoes e escalacoes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}

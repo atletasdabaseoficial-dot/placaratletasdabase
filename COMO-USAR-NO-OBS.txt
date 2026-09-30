@@ -1,0 +1,67 @@
+==================================================================
+  PLACAR PRO VNL  —  COMO COLOCAR NO OBS (passo a passo)
+==================================================================
+
+POR QUE O PLACAR NAO ATUALIZAVA NO OBS?
+Porque o OBS tem um navegador PROPRIO e separado. Ele so consegue
+receber as mudancas em TEMPO REAL se o placar for aberto pelo
+SERVIDOR (endereco http://...), e NAO abrindo o arquivo direto.
+Este guia deixa isso funcionando.
+
+------------------------------------------------------------------
+PASSO 1 - LIGAR O SISTEMA (uma vez, no comeco da transmissao)
+------------------------------------------------------------------
+- Windows: de dois cliques em  INICIAR-WINDOWS.bat
+- Mac/Linux: de dois cliques em iniciar-mac-linux.command
+
+Uma janela preta vai abrir e MOSTRAR OS ENDERECOS. Deixe essa
+janela ABERTA ate o fim do jogo (se fechar, o placar para).
+
+O navegador vai abrir sozinho na pagina de CONTROLE.
+
+------------------------------------------------------------------
+PASSO 2 - PEGAR O LINK DO OVERLAY
+------------------------------------------------------------------
+Na pagina que abriu, escolha/valide o nome da partida (id).
+Use SEMPRE o MESMO id no controle e no overlay, por exemplo: jogo1
+
+O endereco do overlay fica assim:
+    http://localhost:3000/overlay.html?id=jogo1
+
+(A janela preta tambem mostra esse endereco pronto para copiar.)
+
+------------------------------------------------------------------
+PASSO 3 - COLOCAR NO OBS
+------------------------------------------------------------------
+1. No OBS, em FONTES, clique no + (mais).
+2. Escolha NAVEGADOR (Browser).
+3. Marque "Criar nova" e clique OK.
+4. No campo URL, COLE o endereco do overlay:
+       http://localhost:3000/overlay.html?id=jogo1
+5. Largura: 1920   Altura: 1080
+6. Clique OK.
+
+Pronto! Agora, tudo que voce mexer na pagina de CONTROLE aparece
+na hora dentro do OBS.
+
+DICA: se mudou algo e o OBS demorar, clique com o botao direito na
+fonte Navegador -> "Atualizar cache da pagina atual".
+
+------------------------------------------------------------------
+USAR O CONTROLE EM OUTRO PC OU NO CELULAR (mesma rede Wi-Fi)
+------------------------------------------------------------------
+A janela preta mostra um endereco com numeros, tipo:
+    http://192.168.0.15:3000/
+Abra esse endereco no celular/PC que esta na MESMA rede.
+Use o MESMO id (ex.: jogo1). Assim voce controla o placar de longe
+e o OBS continua mostrando tudo em tempo real.
+
+------------------------------------------------------------------
+PROBLEMAS COMUNS
+------------------------------------------------------------------
+- "Nao atualiza no OBS": confirme que o endereco no OBS comeca com
+  http://  (e NAO com file:///). Tem que ser pelo servidor.
+- "id" diferente: controle e overlay PRECISAM ter o mesmo id.
+- Fechou a janela preta: o placar para. Abra o INICIAR de novo.
+- Node.js nao instalado: baixe em https://nodejs.org (versao LTS).
+==================================================================

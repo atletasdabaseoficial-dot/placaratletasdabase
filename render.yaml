@@ -1,0 +1,11 @@
+# Deploy automático no Render.com (https://render.com)
+# 1. Suba esta pasta para um repositório no GitHub.
+# 2. No Render: New -> Blueprint -> selecione o repo. Ele lê este arquivo.
+# 3. Ao final, você recebe uma URL pública = sua "Central de Transmissão".
+services:
+  - type: web
+    name: placar-pro-vnl
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
